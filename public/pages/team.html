@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Liga Sport</title>
+  <meta name="description" content="This app contain the Champions League information"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/materialize.min.css">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#194269">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!--NavBar-->
+    <nav role="navigation" style="background: rgb(106,157,205); background: radial-gradient(circle, rgba(106,157,205,1) 0%, rgba(25,66,105,1) 70%);">
+        <div class="nav-wrapper container">
+          <a href="#" class="brand-logo" id="logo-container">Liga Sport</a>
+          <a href="#" class=" waves-effect waves-light sidenav-trigger" data-target="nav-mobile" onclick="window.history.back()">
+            <i class="material-icons">arrow_back</i>
+          </a>
+          <a id="addToLikes" class="waves-effect waves-light right"><i class="material-icons">thumb_up</i></a>
+        </div>
+    </nav>
+
+    <!--BodyContent-->
+    <div id="body-content">
+      <div class="preloader-wrapper big active" style="margin-left: 50%; margin-top: 20px;">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js"
+    ></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/regis.js"></script>
+    <script src="../js/idb.js"></script>
+    <script src="../js/db.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const team = getTeamById();
+            console.log(team);
+            
+            const likes = document.getElementById("addToLikes");
+            likes.onclick = function() {
+                console.log("Add this team to favorite list");
+                  team.then(teamtoadd => {
+                    addNewTeam(teamtoadd);
+               })
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<style>
+    body {
+        background-image: linear-gradient(to bottom, black, rgb(16, 72, 124), black);
+        height: 100vh;
+    }
+    .card {
+        border-radius: 10px;
+        background-color: rgb(11, 54, 95);
+        color: white;
+        text-align: center;
+        font-size: xx-small;
+    }
+    img {
+        width: 50px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.74);
+    }
+</style>
+
+<div class="container">
+    <div class="col s12">
+        <ul class="tabs tabs-transparent">
+            <li class="tab col s6">
+                <a href="#finished">Finished</a>
+            </li>
+            <li class="tab col s6">
+                <a class="active" href="#upcoming">Upcoming</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tabs-content">
+        <div class="col s12">
+            <div class="row" id="finished" >
+                <div class="preloader-wrapper big active" style="margin-left: 50%; margin-top: 20px;">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="col s12">
+            <div class="row" id="upcoming">
+                <div class="preloader-wrapper big active" style="margin-left: 50%; margin-top: 20px;">
+                    <div class="spinner-layer spinner-blue-only">
+                      <div class="circle-clipper left">
+                        <div class="circle"></div>
+                      </div><div class="gap-patch">
+                        <div class="circle"></div>
+                      </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
